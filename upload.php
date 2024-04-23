@@ -15,7 +15,7 @@ if(isset($_POST['submit']) && isset($_FILES['my_image']) && isset($_POST['image_
     if ($error === 0) {
         if ($img_size > 83886080){
             $em = "Sorry, your file is too large. Limit is 10 MB";
-            header("Location: index.php?error=" . urlencode($em));
+            header("Location: main.php?error=" . urlencode($em));
         } else {
             $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
             $img_ex_lc = strtolower($img_ex);
@@ -42,17 +42,17 @@ if(isset($_POST['submit']) && isset($_FILES['my_image']) && isset($_POST['image_
                 }
             } else {
                 $em = "You can't upload a file of this type!!";
-                header("Location: index.php?error=" . urlencode($em));
+                header("Location: main.php?error=" . urlencode($em));
                 die;
             }
         }
     } else {
         $em = "unknown error occurred";
-        header("Location: index.php?error=" . urlencode($em));
+        header("Location: main.php?error=" . urlencode($em));
         die;
     }
 } else {
-    header("Location: index.php");
+    header("Location: main.php");
     die;
 }
 ?>
