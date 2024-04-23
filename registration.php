@@ -95,7 +95,7 @@ if(isset($_POST["submit"])){
             <!-- <button type="submit" name="submit">Register</button> -->
         </form> 
         <div class="group">
-            <a href="login.php">Sign In</a>
+            <a href="index.php">Sign In</a>
         </div>
     </div>
     <script src="app3.js"></script>
